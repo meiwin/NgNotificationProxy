@@ -83,3 +83,44 @@ or
                                               name:@"NotificationName" 
                                             object:nil];
 ```
+
+## Benefits
+
+NgNotificationProxy gives you better control and writing cleaner code.
+One of the most common use case is to deliver notification to main thread for performing UI updates as result of an event.
+
+With `NSNotificationCenter`.
+
+```objective-c
+// observing notification
+[[NSNotificationCenter defaultCenter] addObserver:self 
+                                         selector:@selector(updateUI:) 
+                                             name:kUIDataUpdateNotification 
+                                           object:nil];
+
+
+// updateUI implementation.
+- (void)updateUI:(NSNotification *)notification
+{
+  dispatch_async(dispatch_get_main_queue(), ^{ // ensure `reloadData` always execute in main-thread
+     [self reloadData];
+  });
+}
+```
+
+With `NgNotificationProxy`.
+
+```objective-c
+// observing notification
+[[NgNotificationProxy defaultProxy] addObserver:self
+                                       selector:@selector(updateUI:) 
+                                           name:kUIDataUpdateNotification 
+                                         object:nil
+                                         thread:NgNotificationProxyThreadMain];
+
+// updateUI implementation
+- (void)updateUI:(NSNotification *)notification
+{
+  [self reloadData];
+}
+```
