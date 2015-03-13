@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC37E8DC1AB1FD84001A311B /* libNgNotificationProxy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC37E8D01AB1FD84001A311B /* libNgNotificationProxy.a */; };
+		DC37E8EF1AB1FDB2001A311B /* NgNotificationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37E8EB1AB1FDB2001A311B /* NgNotificationProxy.m */; };
+		DC37E8F01AB1FDB2001A311B /* NgWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37E8ED1AB1FDB2001A311B /* NgWeakProxy.m */; };
+		DC37E8F21AB1FDF5001A311B /* NgWeakProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37E8F11AB1FDF5001A311B /* NgWeakProxyTests.m */; };
+		DC37E8F41AB20137001A311B /* NgNotificationProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37E8F31AB20137001A311B /* NgNotificationProxyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC37E8DD1AB1FD84001A311B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC37E8C81AB1FD84001A311B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC37E8CF1AB1FD84001A311B;
+			remoteInfo = NgNotificationProxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC37E8CE1AB1FD84001A311B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DC37E8D01AB1FD84001A311B /* libNgNotificationProxy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNgNotificationProxy.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC37E8DB1AB1FD84001A311B /* NgNotificationProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NgNotificationProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC37E8E11AB1FD84001A311B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC37E8EA1AB1FDB2001A311B /* NgNotificationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NgNotificationProxy.h; sourceTree = "<group>"; };
+		DC37E8EB1AB1FDB2001A311B /* NgNotificationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NgNotificationProxy.m; sourceTree = "<group>"; };
+		DC37E8EC1AB1FDB2001A311B /* NgWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NgWeakProxy.h; sourceTree = "<group>"; };
+		DC37E8ED1AB1FDB2001A311B /* NgWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NgWeakProxy.m; sourceTree = "<group>"; };
+		DC37E8EE1AB1FDB2001A311B /* NgWeakProxySubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NgWeakProxySubclass.h; sourceTree = "<group>"; };
+		DC37E8F11AB1FDF5001A311B /* NgWeakProxyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NgWeakProxyTests.m; sourceTree = "<group>"; };
+		DC37E8F31AB20137001A311B /* NgNotificationProxyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NgNotificationProxyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC37E8CD1AB1FD84001A311B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC37E8D81AB1FD84001A311B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC37E8DC1AB1FD84001A311B /* libNgNotificationProxy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC37E8C71AB1FD84001A311B = {
+			isa = PBXGroup;
+			children = (
+				DC37E8D21AB1FD84001A311B /* NgNotificationProxy */,
+				DC37E8DF1AB1FD84001A311B /* NgNotificationProxyTests */,
+				DC37E8D11AB1FD84001A311B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC37E8D11AB1FD84001A311B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC37E8D01AB1FD84001A311B /* libNgNotificationProxy.a */,
+				DC37E8DB1AB1FD84001A311B /* NgNotificationProxyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC37E8D21AB1FD84001A311B /* NgNotificationProxy */ = {
+			isa = PBXGroup;
+			children = (
+				DC37E8EC1AB1FDB2001A311B /* NgWeakProxy.h */,
+				DC37E8ED1AB1FDB2001A311B /* NgWeakProxy.m */,
+				DC37E8EE1AB1FDB2001A311B /* NgWeakProxySubclass.h */,
+				DC37E8EA1AB1FDB2001A311B /* NgNotificationProxy.h */,
+				DC37E8EB1AB1FDB2001A311B /* NgNotificationProxy.m */,
+			);
+			path = NgNotificationProxy;
+			sourceTree = "<group>";
+		};
+		DC37E8DF1AB1FD84001A311B /* NgNotificationProxyTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC37E8E01AB1FD84001A311B /* Supporting Files */,
+				DC37E8F11AB1FDF5001A311B /* NgWeakProxyTests.m */,
+				DC37E8F31AB20137001A311B /* NgNotificationProxyTests.m */,
+			);
+			path = NgNotificationProxyTests;
+			sourceTree = "<group>";
+		};
+		DC37E8E01AB1FD84001A311B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC37E8E11AB1FD84001A311B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC37E8CF1AB1FD84001A311B /* NgNotificationProxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC37E8E41AB1FD84001A311B /* Build configuration list for PBXNativeTarget "NgNotificationProxy" */;
+			buildPhases = (
+				DC37E8CC1AB1FD84001A311B /* Sources */,
+				DC37E8CD1AB1FD84001A311B /* Frameworks */,
+				DC37E8CE1AB1FD84001A311B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NgNotificationProxy;
+			productName = NgNotificationProxy;
+			productReference = DC37E8D01AB1FD84001A311B /* libNgNotificationProxy.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DC37E8DA1AB1FD84001A311B /* NgNotificationProxyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC37E8E71AB1FD84001A311B /* Build configuration list for PBXNativeTarget "NgNotificationProxyTests" */;
+			buildPhases = (
+				DC37E8D71AB1FD84001A311B /* Sources */,
+				DC37E8D81AB1FD84001A311B /* Frameworks */,
+				DC37E8D91AB1FD84001A311B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC37E8DE1AB1FD84001A311B /* PBXTargetDependency */,
+			);
+			name = NgNotificationProxyTests;
+			productName = NgNotificationProxyTests;
+			productReference = DC37E8DB1AB1FD84001A311B /* NgNotificationProxyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC37E8C81AB1FD84001A311B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Meiwin;
+				TargetAttributes = {
+					DC37E8CF1AB1FD84001A311B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					DC37E8DA1AB1FD84001A311B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = DC37E8CB1AB1FD84001A311B /* Build configuration list for PBXProject "NgNotificationProxy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DC37E8C71AB1FD84001A311B;
+			productRefGroup = DC37E8D11AB1FD84001A311B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC37E8CF1AB1FD84001A311B /* NgNotificationProxy */,
+				DC37E8DA1AB1FD84001A311B /* NgNotificationProxyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC37E8D91AB1FD84001A311B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC37E8CC1AB1FD84001A311B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC37E8EF1AB1FDB2001A311B /* NgNotificationProxy.m in Sources */,
+				DC37E8F01AB1FDB2001A311B /* NgWeakProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC37E8D71AB1FD84001A311B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC37E8F41AB20137001A311B /* NgNotificationProxyTests.m in Sources */,
+				DC37E8F21AB1FDF5001A311B /* NgWeakProxyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC37E8DE1AB1FD84001A311B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC37E8CF1AB1FD84001A311B /* NgNotificationProxy */;
+			targetProxy = DC37E8DD1AB1FD84001A311B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DC37E8E21AB1FD84001A311B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DC37E8E31AB1FD84001A311B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC37E8E51AB1FD84001A311B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DC37E8E61AB1FD84001A311B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DC37E8E81AB1FD84001A311B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NgNotificationProxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC37E8E91AB1FD84001A311B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NgNotificationProxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC37E8CB1AB1FD84001A311B /* Build configuration list for PBXProject "NgNotificationProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC37E8E21AB1FD84001A311B /* Debug */,
+				DC37E8E31AB1FD84001A311B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC37E8E41AB1FD84001A311B /* Build configuration list for PBXNativeTarget "NgNotificationProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC37E8E51AB1FD84001A311B /* Debug */,
+				DC37E8E61AB1FD84001A311B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC37E8E71AB1FD84001A311B /* Build configuration list for PBXNativeTarget "NgNotificationProxyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC37E8E81AB1FD84001A311B /* Debug */,
+				DC37E8E91AB1FD84001A311B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC37E8C81AB1FD84001A311B /* Project object */;
+}
