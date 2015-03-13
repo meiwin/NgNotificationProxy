@@ -10,4 +10,5 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.frameworks = 'Foundation'
+  spec.ios.deployment_target = "5.0"
 end
