@@ -2,7 +2,7 @@
 
 # NgNotificationProxy
 
-NgNotificationProxy is simple proxy implementation for observing notification posted with `NSNotificationCenter`.
+NgNotificationProxy is small objective-c library that provides better way to work with notifications from `NSNotificationCenter`.
 
 ## Adding to your project
 
