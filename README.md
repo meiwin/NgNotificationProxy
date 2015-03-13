@@ -6,6 +6,8 @@ NgNotificationProxy is simple proxy implementation for observing notification po
 
 ## Adding to your project
 
+If you are using Cocoapods, add to your Podfile:
+
 ```ruby
 pod NgNotificationProxy
 ```
