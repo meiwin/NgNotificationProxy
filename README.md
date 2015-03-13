@@ -34,25 +34,40 @@ With NgNotificationProxy, you can specify target thread to which notification is
 Deliver notifications to current thread.
 
 ```objective-c
-[[NgNotificationProxy defaultProxy] addObserver:self selector:@selector(onNotification:) name:@"NotificationName" object:nil];
+[[NgNotificationProxy defaultProxy] addObserver:self 
+                                       selector:@selector(onNotification:) 
+                                           name:@"NotificationName" 
+                                          object:nil];
 ```
 
 Deliver notifications to main thread.
 
 ```objective-c
-[[NgNotificationProxy defaultProxy] addObserver:self selector:@selector(onNotification:) name:@"NotificationName" object:nil thread:NgNotificationProxyThreadMain];
+[[NgNotificationProxy defaultProxy] addObserver:self 
+                                       selector:@selector(onNotification:) 
+                                           name:@"NotificationName" 
+                                         object:nil 
+                                         thread:NgNotificationProxyThreadMain];
 ```
 
 Deliver notifications to background thread.
 
 ```objective-c
-[[NgNotificationProxy defaultProxy] addObserver:self selector:@selector(onNotification:) name:@"NotificationName" object:nil thread:NgNotificationProxyThreadBackground];
+[[NgNotificationProxy defaultProxy] addObserver:self 
+                                       selector:@selector(onNotification:) 
+                                           name:@"NotificationName" 
+                                         object:nil 
+                                         thread:NgNotificationProxyThreadBackground];
 ```
 
 Deliver notifications to user-defined thread.
 
 ```objective-c
-[[NgNotificationProxy defaultProxy] addObserver:self selector:@selector(onNotification:) name:@"NotificationName" object:nil threadName:@"com.x.SpecialThread"];
+[[NgNotificationProxy defaultProxy] addObserver:self 
+                                       selector:@selector(onNotification:) 
+                                           name:@"NotificationName" 
+                                         object:nil 
+                                     threadName:@"MyThread"];
 ```
 
 Stop observing notifications.
@@ -64,5 +79,7 @@ Stop observing notifications.
 or
 
 ```objective-c
-[[NgNotificationProxy defaultProxy] removeObserver:self name:@"NotificationName" object:nil];
+[[NgNotificationProxy defaultProxy] removeObserver:self 
+                                              name:@"NotificationName" 
+                                            object:nil];
 ```
