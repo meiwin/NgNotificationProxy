@@ -80,6 +80,9 @@
   }
   return self;
 }
+- (void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)processNotifications
 {
   [_lock lock];
@@ -354,6 +357,9 @@
   }
   return self;
 }
+- (void)dealloc {
+  [self removeAllObservers];
+}
 + (instancetype)defaultProxy
 {
   static NgNotificationProxy * _defaultProxy;
@@ -497,7 +503,14 @@
   [_subscribers removeObjectsInArray:subscribersToRemove];
   [_lock unlock];
 }
-
+- (void)removeAllObservers {
+  [_lock lock];
+  [_subscribers enumerateObjectsUsingBlock:^(NgNotificationProxySubscriber * subscriber, NSUInteger idx, BOOL *stop) {
+    [[NSNotificationCenter defaultCenter] removeObserver:subscriber];
+  }];
+  [_subscribers removeAllObjects];
+  [_lock unlock];
+}
 #pragma mark NgNotificationProxySubscriberDelegate
 - (void)subscriberDidBecomeInvalid:(NgNotificationProxySubscriber *)subscriber
 {
