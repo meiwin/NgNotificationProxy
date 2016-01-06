@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'NgNotificationProxy'
-  spec.version      = '1.1'
+  spec.version      = '1.2'
   spec.summary      = 'Simple proxy implementation for observing notification posted with `NSNotificationCenter`.'
   spec.homepage     = 'https://github.com/meiwin/NgNotificationProxy'
   spec.author       = { 'Meiwin Fu' => 'meiwin@blockthirty.com' }
