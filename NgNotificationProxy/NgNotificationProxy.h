@@ -52,4 +52,5 @@ typedef NS_ENUM(uint32_t, NgNotificationProxyThread) {
 - (void)removeObserver:(id)observer;
 - (void)removeObserver:(id)observer name:(NSString *)name object:(id)object;
 
+- (void)reset;
 @end
