@@ -197,9 +197,11 @@
 @property (nonatomic, strong, readonly) NSThread * thread;
 @property (nonatomic, strong, readonly) NSMachPort * notificationPort;
 @property (nonatomic, strong, readonly) NSLock * notificationLock;
+@property (nonatomic, strong, readonly) NSRunLoop * runLoop;
 @property (nonatomic, weak) id<NgNotificationProxyInternalDelegate> delegate;
 - (instancetype)initWithThreadName:(NSString *)threadName;
 - (instancetype)initWithThread:(NSThread *)thread;
+- (void)cancel;
 @end
 
 @implementation NgNotificationProxyInternal
@@ -244,6 +246,19 @@
   {
     [runLoop run];
   }
+  _runLoop = runLoop;
+}
+- (void)cancel {
+  _notificationPort.delegate = nil;
+  [_runLoop removePort:_notificationPort forMode:NSRunLoopCommonModes];
+  if (_runLoop != [NSRunLoop mainRunLoop]) {
+    CFRunLoopStop([_runLoop getCFRunLoop]);
+  }
+  [_thread cancel];
+  
+  _notificationPort = nil;
+  _runLoop = nil;
+  _thread = nil;
 }
 
 #pragma mark Delegate
@@ -304,14 +319,21 @@
 @end
 
 @implementation NgNotificationProxyRegistry
+static NgNotificationProxyRegistry * _sharedRegistry;
+static dispatch_once_t * _onceTokenRef;
 + (instancetype)sharedInstance
 {
-  static NgNotificationProxyRegistry * _sharedRegistry;
   static dispatch_once_t onceToken;
+  _onceTokenRef = &onceToken;
   dispatch_once(&onceToken, ^{
     _sharedRegistry = [[NgNotificationProxyRegistry alloc] init];
   });
   return _sharedRegistry;
+}
++ (void)resetSharedInstance {
+  
+  _sharedRegistry = nil;
+  *_onceTokenRef = 0;
 }
 - (instancetype)init
 {
@@ -322,6 +344,12 @@
     _registries = [NSMutableDictionary dictionaryWithCapacity:5];
   }
   return self;
+}
+- (void)dealloc {
+  for (NgNotificationProxyInternal * o in [_registries allValues]) {
+    [o cancel];
+  }
+  _registries = nil;
 }
 - (NgNotificationProxyInternal *)internalNamed:(NSString *)name
 {
@@ -504,11 +532,14 @@
   [_lock unlock];
 }
 - (void)removeAllObservers {
+  
   [_lock lock];
-  [_subscribers enumerateObjectsUsingBlock:^(NgNotificationProxySubscriber * subscriber, NSUInteger idx, BOOL *stop) {
-    [[NSNotificationCenter defaultCenter] removeObserver:subscriber];
-  }];
+  NSMutableArray * subscribersToRemove = [_subscribers copy];
   [_subscribers removeAllObjects];
+  
+  for (NgNotificationProxySubscriber * subscriber in subscribersToRemove) {
+    [[NSNotificationCenter defaultCenter] removeObserver:subscriber];
+  }
   [_lock unlock];
 }
 #pragma mark NgNotificationProxySubscriberDelegate
@@ -527,5 +558,11 @@
   [_lock lock];
   [_subscribers removeObject:subscriber];
   [_lock unlock];
+}
+
+#pragma mark Reset
+- (void)reset {
+  [self removeAllObservers];
+  [NgNotificationProxyRegistry resetSharedInstance];
 }
 @end
