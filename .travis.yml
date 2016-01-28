@@ -1,2 +1,2 @@
 language: objective-c
-script: xcodebuild test -scheme NgNotificationProxy -sdk 'iphonesimulator' ONLY_ACTIVE_ARCH=NO
+script: xcodebuild test -scheme NgNotificationProxy -destination 'platform=iOS Simulator,name=iPhone 6'
