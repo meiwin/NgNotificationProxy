@@ -6,7 +6,7 @@ NgNotificationProxy is small objective-c library that provides better way to wor
 
 ## Adding to your project
 
-If you are using Cocoapods, add to your Podfile:
+If you are using CocoaPods, add to your Podfile:
 
 ```ruby
 pod NgNotificationProxy
